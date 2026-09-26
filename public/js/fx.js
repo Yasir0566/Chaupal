@@ -185,7 +185,7 @@ export function enableTilt() {
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
     card.classList.add("tilting");
-    card.style.transform = `perspective(700px) rotateY(${px * 12}deg) rotateX(${-py * 12}deg) translateY(-6px)`;
+    card.style.transform = `perspective(900px) rotateY(${px * 5}deg) rotateX(${-py * 5}deg) translateY(-3px)`;
   });
 }
 
@@ -199,8 +199,6 @@ export function revealOnScroll() {
 
 // Everything a page needs for the shared look.
 export function initFx() {
-  buildBunting();
-  sparkleTrail();
   enableTilt();
   revealOnScroll();
 }
